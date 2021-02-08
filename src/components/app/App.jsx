@@ -4,6 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import CharacterList from '../containers/CharacterList/CharacterList';
+import Details from '../containers/Details/Details';
 
 const App = () => {
   return (
@@ -14,7 +16,7 @@ const App = () => {
             <Route
               path = "/"
               exact
-              render = {routerProps => <List {...routerProps}/>}
+              render = {routerProps => <CharacterList {...routerProps}/>}
             />
             <Route
               path = "/:id"
