@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-export default function Character({ name, image }) {
+export default function Character({ id, name, image }) {
   return (
     <>
-      <h1>{name}</h1>
+      <Link to={`/${id}`}>{name}</Link>
       <img src={image}/>
     </>
   );
 }
 
 Character.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
 };
