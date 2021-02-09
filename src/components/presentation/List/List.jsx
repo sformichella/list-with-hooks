@@ -4,7 +4,7 @@ import Character from '../Character/Character';
 
 export default function List({ characters }) {
   return (
-    <ul>
+    <ul data-testid="character-list">
       {
         characters.map(character => {
           return <li key={character.id}><Character {...character}/></li>;

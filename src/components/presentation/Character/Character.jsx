@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 export default function Character({ id, name, image }) {
   return (
     <>
-      <Link to={`/${id}`}>{name}</Link>
+      <a href={`/${id}`}>{name}</a>
       <img src={image}/>
     </>
   );
