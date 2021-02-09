@@ -7,7 +7,7 @@ const getCharacters = () => {
 };
 
 const getCharacter = id => {
-  return fetch(API_URL + `character?id=${id}`)
+  return fetch(API_URL + `character/${id}`)
     .then(res => res.json())
     .then(json => json.results);
 };
