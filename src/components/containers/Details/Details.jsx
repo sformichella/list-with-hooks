@@ -9,12 +9,12 @@ export default function Details({ match }) {
     const { id } = match.params;
 
     getCharacter(id)
-      .then(chars => setChar(chars));
+      .then(char => setChar(char));
   }, []);
 
   return (
     character.length === 0 ? <h1>Loading</h1>
-      : <CharacterDetails character={character}/>  
+      : <CharacterDetails {...character}/>  
   );
 }
 
