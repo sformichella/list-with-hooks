@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import CharacterList from './CharacterList';
 
 describe('CharacterList', () => {
-  it('changes the search input', async() => {
+  it('renders a character list', async() => {
     render(<CharacterList />);
 
     const list = await screen.findByTestId('character-list');

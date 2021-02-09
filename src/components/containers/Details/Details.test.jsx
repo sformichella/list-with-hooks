@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import Details from './Details';
 
 describe('Details', () => {
-  it('changes the search input', async() => {
+  it('renders a character\'s details', async() => {
     render(<Details match={{ params: { id: 1 } }}/>);
 
     const character = await screen.findByTestId('character');
